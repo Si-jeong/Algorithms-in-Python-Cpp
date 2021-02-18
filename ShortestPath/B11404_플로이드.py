@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import print_function  # 파이썬 3 기능 사용
-
 import sys
 input = sys.stdin.readline
 

@@ -1,5 +1,5 @@
 n, m = map(int, input().split())
-x, y, dir = map(int, input().split())
+x, y, direction = map(int, input().split())
 x = m - x - 1
 
 graph = []
@@ -18,7 +18,7 @@ while True:
     # 네 방향 모두 바다거나 가본 칸이라면
     if stop == 4:
         # 반대 방향으로 이동
-        back = (dir + 2) % 4
+        back = (direction + 2) % 4
         nx = x + dx[back]
         ny = y + dy[back]
         # 갈수 없는 경우 움직임을 멈춘다.
@@ -28,9 +28,9 @@ while True:
         stop = 0
         continue
     # 왼쪽 방향으로 회전 후 이동
-    dir = (dir + 1) % 4
-    nx = x + dx[dir]
-    ny = y + dy[dir]
+    direction = (direction + 1) % 4
+    nx = x + dx[direction]
+    ny = y + dy[direction]
     if 0<=nx<m and 0<=ny<n and graph[ny][nx] == 0:
         result += 1
         graph[ny][nx] = 2 # 가본 칸 2로 표시

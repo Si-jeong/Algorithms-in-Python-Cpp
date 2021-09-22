@@ -13,7 +13,7 @@ while start<=end:
             total += length-mid
     if total<m:
         end=mid-1
-    else #total>=m
+    else: #total>=m
         start=mid+1
         result=mid #적어도 m만큼 가져가는 높이의 최대값
 

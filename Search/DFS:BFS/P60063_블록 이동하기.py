@@ -50,11 +50,9 @@ def solution(board):
         if (n, n) in pos:
             return cost
         # 현재 위치에서 이동할 수 있는 위치 확인
-        for next_pos in get_next_pos(pos, new_board):
+        for next_pos in get_next_node(pos, new_board):
             # 아직 방문하지 않은 위치라면 큐에 삽입하고 방문 처리
             if next_pos not in visited:
                 q.append((next_pos, cost+1))
                 visited.append(next_pos)
     return 0
-                
-            

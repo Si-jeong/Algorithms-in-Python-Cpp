@@ -1,6 +1,6 @@
 # 시간초과 문제
-# 모든 점 -> 세 점에 대해
-# 인접 행렬로 자료구조 변경
+# 모든 점 -> 세 점에 대해 다익스트라 알고리즘 적용
+# 인접 행렬를 인접 리스트로 자료구조 변경헤서 탐색의 시간복잡도 감소
 import sys, heapq
 input = sys.stdin.readline
 INF = int(1e9)
@@ -33,7 +33,7 @@ def dijkstra(s):
                 distance[i] = cost
                 heapq.heappush(q, (cost, i))
     ans.append(distance)
-    # print(val)
+    # print(distance)
 
 for s in [a, b, c]:
     dijkstra(s)

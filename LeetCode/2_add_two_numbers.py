@@ -6,12 +6,12 @@ class ListNode:
         
 class Solution:
     
-    def addNode(self, l: Optional[ListNode], val: int):
+    def addNode(self, l: ListNode, val: int):
         while l.next:
             l = l.next
         l.next = ListNode(val)
         
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         
         answer = ListNode("head")
         
@@ -37,4 +37,4 @@ class Solution:
                 
         if up: self.addNode(answer, up)
                 
-        return answer.next       
+        return answer.next   

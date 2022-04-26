@@ -9,7 +9,7 @@ for a in range(1, n + 1):
     for b in range(1, n + 1): 
         if a == b: 
             graph[a][b] = 0 
-for _ in range(m): 
+for _ in range(n):
     a, b = map(int, input().split()) 
     graph[a][b] = 1 
     graph[b][a] = 1 

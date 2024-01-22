@@ -1,1 +1,1 @@
-# Algorithms-in-Python
+# Study Algorithms in Python and C++
